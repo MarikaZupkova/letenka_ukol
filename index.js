@@ -51,14 +51,14 @@ const flight = {
   quality: 66.66659,
 };
 
-document.body.innerHTML += "<p>" + "<h1>Letenka - úkol</h1>" + "</p>";
-document.body.innerHTML += "<p>" + "<h2>Startovní a cílová destinace</h2>" + "</p>";
+document.body.innerHTML += "<h1>Letenka - úkol</h1>";
+document.body.innerHTML += "<h2>Startovní a cílová destinace</h2>" ;
 document.body.innerHTML += "<p>" + "Startovní země: " + flight.flyFrom + "</p>";
 document.body.innerHTML += "<p>" + "Cílová země: " + flight.flyTo + "</p>";
 
 const bagLimit = flight.baglimit;
 
-document.body.innerHTML += "<p>" + "<h2>Povolené rozměry zavazadel</h2>" + "</p>";
+document.body.innerHTML += "<h2>Povolené rozměry zavazadel</h2>";
 document.body.innerHTML += "<p>" + "Výška: " + bagLimit.hand_height + " cm,</p>";
 document.body.innerHTML += "<p>" + "Délka: " + bagLimit.hand_length + " cm,</p>";
 document.body.innerHTML += "<p>" + "Hloubka: " + bagLimit.hand_width + " cm,</p>";
