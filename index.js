@@ -51,16 +51,17 @@ const flight = {
   quality: 66.66659,
 };
 
-document.body.innerHTML += "<h1>Letenka - úkol</h1>";
-document.body.innerHTML += "<h2>Startovní a cílová destinace</h2>" ;
-document.body.innerHTML += "<p>" + "Startovní země: " + flight.flyFrom + "</p>";
-document.body.innerHTML += "<p>" + "Cílová země: " + flight.flyTo + "</p>";
+document.body.innerHTML += `<h1>Letenka - úkol</h1>`;
+document.body.innerHTML += `<h2>Startovní a cílová destinace</h2>` ;
+document.body.innerHTML += `<p>Startovní země: ${flight.flyFrom}</p>`;
+document.body.innerHTML += `<p>Cílová země: ${flight.flyTo}</p>`;
 
-const bagLimit = flight.baglimit;
+const bagLimits = flight.baglimit;
+const secondBagPrice = Math.ceil (flight.bags_price[2] * flight.conversion.EUR);
 
-document.body.innerHTML += "<h2>Povolené rozměry zavazadel</h2>";
-document.body.innerHTML += "<p>" + "Výška: " + bagLimit.hand_height + " cm,</p>";
-document.body.innerHTML += "<p>" + "Délka: " + bagLimit.hand_length + " cm,</p>";
-document.body.innerHTML += "<p>" + "Hloubka: " + bagLimit.hand_width + " cm,</p>";
-document.body.innerHTML += "<p>" + "Váha: " + bagLimit.hand_weight + " Kg.</p>";
-document.body.innerHTML += "<p>" + "Cena druhého zavazadla: " + Math.ceil (flight.bags_price[2] * flight.conversion.EUR) + " CZK.</p>";
+document.body.innerHTML += `<h2>Povolené rozměry zavazadel</h2>`;
+document.body.innerHTML += `<p>Výška: ${bagLimits.hand_height} cm,</p>`;
+document.body.innerHTML += `<p>Délka: ${bagLimits.hand_length} cm,</p>`;
+document.body.innerHTML += `<p>Hloubka: ${bagLimits.hand_width} cm,</p>`;
+document.body.innerHTML += `<p>Váha: ${bagLimits.hand_weight} Kg.</p>`;
+document.body.innerHTML += `<p>Cena druhého zavazadla: ${secondBagPrice} CZK.</p>`;
